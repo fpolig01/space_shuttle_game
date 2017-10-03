@@ -24,7 +24,7 @@ x_change = 0
 
 def shuttle(x, y):
     gameDisplay.blit(space_shuttle_img, (x, y))
-
+a
 
 crashed = False
 
