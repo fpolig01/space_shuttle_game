@@ -22,29 +22,13 @@ def shuttle(x, y):
     gameDisplay.blit(space_shuttle_img, (x, y))
 
 
-def text_objects(text, font):
-    textSurface = font.render(text, True, black)
-    return textSurface, textSurface.get_rect()
-
-
 def message_display(text):
-
-    largeText = pygame.font.Font('freesansbold.ttf', 115)
-
-    TextSurf, TextRect = text_objects(text, largeText)
-
-
-    TextRect.center = ((display_width/2), (display_height/2))
-    gameDisplay.blit(TextSurf, TextRect)
+    font = pygame.font.Font('freesansbold.ttf', 115)
+    gameDisplay.blit(font.render(text, True, (0, 0, 0)), ((display_width / 2) - len(text) * 32, 50))
     pygame.display.update()
     time.sleep(2)
 
     game_loop()
-
-
-def crash():
-
-    message_display('You crashed')
 
 
 def game_loop():
@@ -81,7 +65,7 @@ def game_loop():
         shuttle(x, y)
 
         if x > display_width - car_width or x < 0:
-            crash()
+            message_display('You Crashed')
 
 
         pygame.display.update()
