@@ -1,4 +1,4 @@
-## Thanks to SentDex Tutorials for teaching this
+## Thanks to SentDex Tutorials
 
 import pygame,time, random
 
