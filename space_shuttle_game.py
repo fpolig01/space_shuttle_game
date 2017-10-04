@@ -1,3 +1,5 @@
+## Thanks to SentDex Tutorials for teaching this
+
 import pygame,time, random
 
 pygame.init()
