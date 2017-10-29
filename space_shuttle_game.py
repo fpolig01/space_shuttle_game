@@ -1,4 +1,4 @@
-## Thanks to SentDex PyGame Youtube tutorial series
+## Thanks to SentDex PyGame Youtube tutorial series!!
 
 import pygame,time, random
 
